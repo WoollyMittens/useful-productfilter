@@ -92,6 +92,10 @@ var productFilter = new ProductFilter({
 
 **'delay' : {Miliseconds}** - Time for animations to complete.
 
+## How to control the script
+
+TODO: External API calls.
+
 ## How to build the script
 
 This project uses node.js from http://nodejs.org/
