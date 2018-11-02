@@ -46,7 +46,7 @@ This include can be added to the header or placed inline before the script is in
 				<p>Lorem ipsum dolor sit amet</p>
 				<dl class="product-properties">
 					<dt>Author:</dt><dd class="product-author">Lorem</dd>
-					<dt>Date:</dt><dd class="product-date" data-value="3 Nov 2018">3 Nov 2018</dd>
+					<dt>Date:</dt><dd class="product-date" data-value="3 Nov 2018">November 3rd 2018</dd>
 				</dl>
 				<dl class="product-rating">
 					<dt>Rating:</dt><dd>8</dd>
@@ -60,6 +60,20 @@ This include can be added to the header or placed inline before the script is in
 	...
 </ul>
 ```
+
+**'data-sort' : {CSS Rule}** - Parent element within to sort.
+
+**'value' : {CSS Rule}** - The HTML element containing the value to sort by.
+
+**'data-type' : {Keyword}** - Parse the data as date, number, or string.
+
+**'data-direction' : {Keyword}** - Ascending or descending sort.
+
+**'data-filter' : {CSS Rule}** - Parent element within to filter.
+
+**'data-by' : {CSS rule}** - The HTML element containing the value to filter by.
+
+**'data-value' : {string}** - Placeholder value (that's easier to parse).
 
 ```javascript
 var productFilter = new ProductFilter({
