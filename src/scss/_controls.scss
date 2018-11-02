@@ -1,0 +1,20 @@
+.product-controls {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 0 2rem;
+
+	label {
+		flex: 0 1 auto;
+		@media (max-width:767px) {
+			width: 100%;
+			margin-bottom: 1rem;
+
+			input,
+			select {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}

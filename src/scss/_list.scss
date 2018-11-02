@@ -1,0 +1,137 @@
+.product-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	margin: 0 -1rem;
+	padding: 0;
+	list-style: none;
+
+	li {
+		display: flex;
+		align-items: stretch;
+		flex: 0 1 auto;
+		width: 33.333%;
+		margin: 0;
+		padding: 0 1rem 2rem;
+		transition-property: transform;
+		transition-timing-function: ease;
+		transition-duration: 500ms; /* set through javascript */
+		transform: scale(1);
+
+		@media (max-width:991px) {
+			width: 50%;
+		}
+		@media (max-width:767px) {
+			width: 100%;
+		}
+
+		&.product-hiding {
+			transform: scale(0);
+		}
+
+		&.product-hidden {
+			display: none;
+		}
+
+		&.product-showing {
+			transform: scale(0);
+		}
+
+		&.product-shown {
+			transform: scale(1);
+		}
+
+		.product-card {
+			display: flex;
+			flex-direction: column;
+			border: solid 1px #ccc;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+
+			.product-photo {
+				flex: 0 1 auto;
+				background-size: cover;
+				background-position: center;
+				min-height: 20rem;
+
+				img {
+					width: 100%;
+					height: auto;
+					vertical-align: top;
+
+					@media (max-width:991px) {
+						display: none;
+					}
+				}
+			}
+
+			figcaption {
+				flex: 1 1 auto;
+				display: flex;
+				flex-direction: column;
+				padding: 1.5rem;
+
+				h3 {
+					margin: 0 0 1rem;
+				}
+
+				p {
+					margin: 0 0 1rem;
+					flex: 1 1 auto;
+				}
+
+				dl {
+					display: flex;
+					flex-wrap: wrap;
+					margin: 0;
+
+					dt {
+						flex: 0 1 auto;
+						width: 25%;
+						display: inline-block;
+						font-weight: bold;
+					}
+
+					dd {
+						flex: 1 1 auto;
+						width: 75%;
+						display: inline-block;
+						margin: 0;
+					}
+				}
+
+				.product-properties {
+					.product-author {}
+
+					.product-date {}
+				}
+
+				.product-rating {}
+
+				.product-category {
+					dt {
+						flex: 1 1 auto;
+						width: 100%;
+					}
+
+					dd {
+						flex: 0 1 auto;
+						width: auto;
+
+						&:after {
+							content: ',';
+							display: inline-block;
+							margin-right: 0.3em;
+						}
+					}
+
+					dd:last-child:after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
