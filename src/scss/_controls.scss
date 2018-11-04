@@ -3,6 +3,9 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 0 0 2rem;
+	padding: 1rem 0;
+	border-top: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;
 
 	label {
 		flex: 0 1 auto;

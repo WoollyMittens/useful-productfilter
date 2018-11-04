@@ -25,12 +25,17 @@ ProductFilter.prototype.Filtering = function(config, context) {
 
 	this.prefillFilters = function(filter) {
 		// get the filter keywords from the document
-		var keyword, keywords = [];
+		var keyword, keywords = [], count = {};
 		var tags = document.querySelectorAll(filter.getAttribute('data-filter') + ' ' + filter.getAttribute('data-by'));
 		// create a key for each tag
 		for (var a = 0, b = tags.length; a < b; a += 1) {
 			keyword = tags[a].textContent;
-			if (keywords.indexOf(keyword) < 0) keywords.push(keyword);
+			if (keywords.indexOf(keyword) < 0) {
+        keywords.push(keyword);
+        count[keyword] = 1;
+      } else {
+        count[keyword] += 1;
+      }
 		}
 		// sort the keywords
 		keywords.sort();
@@ -44,7 +49,7 @@ ProductFilter.prototype.Filtering = function(config, context) {
 			// create an option in the filter
 			option = document.createElement('option');
 			option.value = '^' + keywords[c] + '$';
-			option.textContent = keywords[c];
+			option.textContent = keywords[c] + '(' + count[keywords[c]] + ')';
 			filter.appendChild(option);
 		}
 	};
