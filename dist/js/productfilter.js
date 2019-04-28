@@ -25,9 +25,8 @@ var ProductFilter = function (config) {
 };
 
 // return as a require.js module
-if (typeof module !== 'undefined') {
-	exports = module.exports = ProductFilter;
-}
+if (typeof define != 'undefined') define([], function () { return ProductFilter });
+if (typeof module != 'undefined') module.exports = ProductFilter;
 
 // extend the class
 ProductFilter.prototype.Filtering = function(config, context) {

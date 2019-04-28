@@ -25,5 +25,5 @@ var ProductFilter = function (config) {
 };
 
 // return as a require.js module
-if (typeof define != 'undefined') define(['productfilter'], function () { return ProductFilter });
+if (typeof define != 'undefined') define([], function () { return ProductFilter });
 if (typeof module != 'undefined') module.exports = ProductFilter;

@@ -9,13 +9,29 @@ Try the <a href="http://www.woollymittens.nl/default.php?url=useful-productfilte
 The stylesheet is best included in the header of the document.
 
 ```html
-<link rel="stylesheet" href="./css/productfilter.css"/>
+<link rel="stylesheet" href="css/productfilter.css"/>
 ```
 
 This include can be added to the header or placed inline before the script is invoked.
 
 ```html
-<script src="./js/productfilter.js"></script>
+<script src="js/productfilter.js"></script>
+```
+
+Or use [Require.js](https://requirejs.org/).
+
+```js
+requirejs([
+	'js/productfilter.js'
+], function(ProductFilter) {
+	...
+});
+```
+
+Or import into an MVC framework.
+
+```js
+var ProductFilter = require('js/productfilter.js');
 ```
 
 ## How to start the script
